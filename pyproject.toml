@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hogswap-v3-py-sdk"
+version = "0.1.0"
+description = "Python SDK for the HogSwap v3 router on Algorand: best-price swap quotes, unsigned transaction groups, the referral programme for platforms, and market data."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "LiquiHog" }]
+requires-python = ">=3.9"
+dependencies = []
+keywords = ["algorand", "dex", "swap", "aggregator", "router", "defi", "hogswap", "liquihog", "referral"]
+classifiers = [
+    "Private :: Do Not Upload",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Typing :: Typed",
+    "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+algosdk = ["py-algorand-sdk>=2.0"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/hogswap_v3"]
